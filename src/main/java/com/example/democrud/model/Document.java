@@ -8,14 +8,15 @@ public class Document {
 	private String typemime;
 	private long size;
 	private String code;
+	private String url;
 	
 	private MultipartFile file;
 	
 	public Document() {}
 
-	public Document(MultipartFile file, String code) {
-		this.file = file;
-		this.code = code;
+	public Document(String name, String url) {
+		this.name = name;
+		this.url = url;
 	}
 
 	public byte[] getDocument() {
@@ -65,4 +66,13 @@ public class Document {
 	public void setFile(MultipartFile file) {
 		this.file = file;
 	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
 }
